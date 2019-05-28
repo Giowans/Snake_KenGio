@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Snake SDL2",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-Wall",
+        "-g",
+        "*.cpp",
+        "-o",
+        "snake.exe",
+        "-I",
+        "C:\\SDL2-2.0.9\\i686-w64-mingw32\\bin",
+        "-I",
+        "C:\\SDL2-2.0.9\\i686-w64-mingw32\\include\\SDL2",
+        "-L",
+        "C:\\SDL2-2.0.9\\i686-w64-mingw32\\lib",
+        "-lmingw32",
+        "-lSDL2main",
+        "-lSDL2",
+        "-lSDL2_ttf"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "g++.exe build active file",
+      "command": "C:\\MinGW\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:\\MinGW\\bin"
+      }
+    }
+  ]
+}
